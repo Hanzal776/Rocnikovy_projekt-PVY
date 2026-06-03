@@ -1,0 +1,41 @@
+{% extends 'catalogue/base.html' %}
+
+{% block content %}
+<div class="card shadow border-0 mb-5">
+    <div class="card-header bg-primary text-white p-4">
+        <h2 class="mb-0 fw-bold">{{ game.title }}</h2>
+    </div>
+    
+    <div class="card-body p-4 bg-white">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <p class="fs-5 mb-2"><strong>Vydavatel / Studio:</strong> {{ game.publisher.name }}</p>
+                {% if game.publisher.website %}
+                    <p><a href="{{ game.publisher.website }}" target="_blank" class="text-decoration-none btn btn-sm btn-outline-info">🌐 Přejít na web vydavatele</a></p>
+                {% endif %}
+            </div>
+            
+            <div class="col-md-6 text-md-end">
+                <p class="fs-5 mb-2"><strong>Rok vydání:</strong> {{ game.release_year|default:"Nezadáno" }}</p>
+                <p class="fs-6">
+                    <strong>Žánry:</strong> 
+                    {% for cat in game.categories.all %}
+                        <span class="badge bg-dark">{{ cat.name }}</span>
+                    {% endfor %}
+                </p>
+            </div>
+        </div>
+        
+        <hr class="text-muted">
+        
+        <h4 class="mt-4 mb-3 fw-bold text-secondary">Popis hry</h4>
+        <p class="text-dark" style="line-height: 1.8; font-size: 1.1rem;">
+            {{ game.description|linebreaks }}
+        </p>
+    </div>
+    
+    <div class="card-footer bg-light p-3">
+        <a href="{% url 'game_list' %}" class="btn btn-secondary shadow-sm">&larr; Zpět na seznam</a>
+    </div>
+</div>
+{% endblock %}

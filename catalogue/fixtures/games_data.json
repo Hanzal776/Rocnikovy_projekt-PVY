@@ -1,0 +1,107 @@
+[
+  {
+    "model": "catalogue.category",
+    "pk": 1,
+    "fields": {
+      "name": "RPG"
+    }
+  },
+  {
+    "model": "catalogue.category",
+    "pk": 2,
+    "fields": {
+      "name": "Akční"
+    }
+  },
+  {
+    "model": "catalogue.category",
+    "pk": 3,
+    "fields": {
+      "name": "Strategie"
+    }
+  },
+  {
+    "model": "catalogue.publisher",
+    "pk": 1,
+    "fields": {
+      "name": "CD Projekt Red",
+      "website": "https://www.cdprojektred.com"
+    }
+  },
+  {
+    "model": "catalogue.publisher",
+    "pk": 2,
+    "fields": {
+      "name": "Rockstar Games",
+      "website": "https://www.rockstargames.com"
+    }
+  },
+  {
+    "model": "catalogue.publisher",
+    "pk": 3,
+    "fields": {
+      "name": "Wargaming",
+      "website": "https://wargaming.com"
+    }
+  },
+  {
+    "model": "catalogue.game",
+    "pk": 1,
+    "fields": {
+      "title": "The Witcher 3: Wild Hunt",
+      "description": "Příběhové RPG s otevřeným světem zasazené do temného fantasy vesmíru. Hráč se ujímá role Geralta z Rivie, námezdního lovce monster.",
+      "release_year": 2015,
+      "publisher": 1,
+      "categories": [1, 2],
+      "image": "game_covers/witcher3.jpg"
+    }
+  },
+  {
+    "model": "catalogue.game",
+    "pk": 2,
+    "fields": {
+      "title": "Cyberpunk 2077",
+      "description": "Akční RPG odehrávající se v Night City, megapolis posedlé mocí, půvabem a modifikacemi těla. Hrajete jako V, námezdní zločinec hledající jedinečný implantát.",
+      "release_year": 2020,
+      "publisher": 1,
+      "categories": [1, 2],
+      "image": "game_covers/cyberpunk.jpg"
+    }
+  },
+  {
+    "model": "catalogue.game",
+    "pk": 3,
+    "fields": {
+      "title": "Grand Theft Auto V",
+      "description": "Když se mladý pouliční podvodník, vysloužilý bankovní lupič a děsivý psychopat zapletou s nejděsivějšími a nejšílenějšími prvky kriminálního podsvětí, musí provést sérii nebezpečných loupeží.",
+      "release_year": 2013,
+      "publisher": 2,
+      "categories": [2],
+      "image": "game_covers/gtav.jpg"
+    }
+  },
+  {
+    "model": "catalogue.game",
+    "pk": 4,
+    "fields": {
+      "title": "Red Dead Redemption 2",
+      "description": "Epický příběh o životě v Americe na úsvitu moderní doby. Po zkažené loupeži ve městě Blackwater jsou Arthur Morgan a gang Van der Linde nuceni uprchnout.",
+      "release_year": 2018,
+      "publisher": 2,
+      "categories": [1, 2],
+      "image": "game_covers/rdr2.jpg"
+    }
+  },
+  {
+    "model": "catalogue.game",
+    "pk": 5,
+    "fields": {
+      "title": "World of Tanks",
+      "description": "Týmová online hra věnovaná obrněné technice z poloviny dvacátého století. Pusťte se do masivních tankových bitev bok po boku s dalšími ocelovými kovboji.",
+      "release_year": 2010,
+      "publisher": 3,
+      "categories": [3],
+      "image": "game_covers/wot.jpg"
+    }
+  }
+]
