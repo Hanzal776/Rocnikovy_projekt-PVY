@@ -8,7 +8,6 @@ urlpatterns = [
     path('', include('catalogue.urls')),
 ]
 
-# Obsluha médií pro Windows, která konečně obejde ty problémy s cestami
 if settings.DEBUG:
     urlpatterns += [
         path(f'{settings.MEDIA_URL.lstrip("/")}<path:path>', serve, {
